@@ -180,7 +180,7 @@ p.card-text {
   font-family: "CenturyNova";
   font-size: 20px;
   margin: 0;
-  padding-left: 3.5px;
+  padding-left: 6.5px;
 }
 
 .card-text {
@@ -198,7 +198,7 @@ p.card-text {
   }
 
   .card-back__content {
-    height: 255px;
+    height: 262px;
   }
 
   .rank {
@@ -219,6 +219,7 @@ p.card-text {
 
   .rank {
     font-size: 32px;
+    padding-left: 3.5px
   }
 
   .card-text {
