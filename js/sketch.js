@@ -84,8 +84,8 @@ window.onload = function () {
   const noun = document.querySelector("#noun");
   const rankAdjective = document.querySelectorAll(".rank-adjective");
   const rankNoun = document.querySelectorAll(".rank-noun");
-  const suitAdjective = document.querySelectorAll("#suit-adjective");
-  const suitNoun = document.querySelectorAll("#suit-noun");
+  const suitAdjective = document.querySelectorAll(".suit-adjective");
+  const suitNoun = document.querySelectorAll(".suit-noun");
 
   const updateCardContent = (element, deck, suitElement, rankElement) => {
     const randomCard = shuffle(deck)[0];

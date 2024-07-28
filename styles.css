@@ -179,9 +179,13 @@ p.card-text {
   font-family: "CenturyNova";
   font-size: 20px;
   margin: 0;
-  padding-left: 6.5px;
+  padding-left: 4.5px;
 }
 
+.suite-block > svg {
+  width: 16px;
+  padding-left: 4.5px
+}
 .card-text {
   width: 100%;
   text-align: center;
@@ -218,6 +222,10 @@ p.card-text {
 
   .rank {
     font-size: 32px;
+    padding-left: 3.5px
+  }
+  .suite-block > svg {
+    width: 22px;
     padding-left: 3.5px
   }
 
