@@ -1,0 +1,244 @@
+/* Global Fonts */
+@font-face {
+  font-family: "Akkurat";
+  src: url("fonts/AkkuratMono.otf");
+}
+
+@font-face {
+  font-family: "CenturyNova";
+  src: url("fonts/CenturyNova.otf");
+}
+
+/*********** Document Global *************/
+/* Chrome, Safari and Opera */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+div::-webkit-scrollbar,
+iframe::-webkit-scrollbar {
+  display: none;
+}
+
+html,
+body,
+div,
+iframe {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+html,
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* This will prevent scrolling */
+}
+
+html,
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+p.card-text {
+  font-family: "Akkurat", monospace;
+}
+
+/* Utils */
+.upside-down {
+  transform: rotate(180deg);
+}
+
+.red {
+  color: #f24822;
+}
+
+.flip .card-container {
+  transform: rotateY(180deg);
+}
+
+/* Containers */
+
+.playing-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding-left: 2px;
+  padding-right: 2px;
+  height: 512px;
+  width: 512px;
+}
+
+/********** Artwork / Cards*************/
+
+.card {
+  background-color: #fff;
+  border: none;
+  padding: 0;
+  width: calc(50vw - 20px);
+  height: 220px;
+  border-radius: 20px;
+  perspective: 1000px;
+  outline: none;
+  margin: 8px;
+  cursor: pointer;
+}
+
+.card-border {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-radius: 18px;
+  border: 7px solid #fff;
+  height: 100%;
+}
+
+.card > .card-border {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  backface-visibility: hidden;
+  filter: drop-shadow(-2px 5px 4px #a3a3a3);
+}
+
+.card-front {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 1.2px solid #e5e3e3;
+  border-radius: 20px;
+}
+
+.card-front.left {
+  background-color: #fff;
+  background-image: url(assets/adjective-cover.svg);
+  background-size: 25%;
+}
+
+.card-front.right {
+  background-image: url(assets/noun-cover.svg);
+  background-color: #fff;
+  background-size: 25%;
+}
+
+.card-border {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-radius: 18px;
+  border: 10px solid #fff;
+  height: 100%;
+}
+
+.card-back__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 208px;
+  padding: 0.5em;
+}
+
+.card-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  background-color: #f2f2f2;
+}
+
+.suite-block {
+  width: 100%;
+  text-align: left;
+}
+
+.rank {
+  font-family: "CenturyNova";
+  font-size: 20px;
+  margin: 0;
+  padding-left: 3.5px;
+}
+
+.card-text {
+  width: 100%;
+  text-align: center;
+  font-family: "Akkurat";
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #222;
+}
+
+@media screen and (min-width: 350px) and (max-width: 444px) {
+  .card {
+    height: 275px;
+  }
+
+  .card-back__content {
+    height: 255px;
+  }
+
+  .rank {
+    font-family: "CenturyNova";
+    font-size: 25px;
+  }
+}
+
+@media screen and (min-width: 445px) {
+  .card {
+    width: 230px;
+    height: 340px;
+  }
+
+  .card-back__content {
+    height: 330px;
+  }
+
+  .rank {
+    font-size: 32px;
+  }
+
+  .card-text {
+    font-size: 12px;
+  }
+
+  .card-border {
+    border: 7px solid #fff;
+  }
+}
+
+/* 
+
+You really went through my CSS? 
+you're perfect and I love you. 
+kiss kiss
+
+PS: I know, these media queries could be tighter. 
+I just... I got a little impatient by my use of absolute positioning, okay?
+
+(Just view this piece on a goddamn desktop. Thanks!)
+
+*/

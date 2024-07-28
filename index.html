@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-----------------------------------------------------------------------
+  "Misunderstood Machines" by Sofia Garcia
+  27 July 2024, 8:00PM ET
+  
+  o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o
+  ======== o
+  ============= o
+  =================== o
+  ========================= o
+  o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o
+
+  Oh, you made it. 
+
+  I'm a little excited (read: nervous) you snuck back here.
+
+  o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o
+  ========================= o
+  =================== o
+  ============= o
+  ======== o 
+  o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o
+--------------------------------------------------------------------------->
+
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    
+    <script src="js/deckOfCards.js"></script>
+    <script src="js/sketch.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+
+  <body class="homepage" class="meaningless-machines">
+<!---------------------This is the little area where I make my little art ------------------------->
+    <section class="playing-cards card-row" role="region" aria-label="Two sets of playing cards side-by-side">
+
+    <!--------------------- This is a card! You can flip it   ------------------------->
+      <button class="card wrapper left" tabindex="0" id="sensitive-card" aria-label="Deck of cards with adjectives related to personality and feeling" aria-live="polite">
+        <div class="card-container">
+          <div class="card-front left">
+            <div class="card-border"></div>
+          </div>
+
+          <div class="card-back">
+            <div class="card-back__content" id="adj-container">
+              <div class="suite-block">
+                <p class="rank rank-adjective">#</p>
+                <div id="suit-adjective">
+                  <!-- SVG icon for suit -->
+                </div>
+              </div>
+              <p class="card-text" id="adjective"> &#9729; </p>
+              <div class="suite-block upside-down">
+                <p class="rank rank-adjective">#</p>
+                <div id="suit-adjective">
+                  <!-- SVG icon -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-border"></div>
+      </button>
+
+       <!--------------------- This is also a card! ------------------------->
+      <button class="card wrapper right" tabindex="0" id="rigid-card" aria-label="Deck of cards with terms related to computer science and web development" aria-live="polite">
+        <div class="card-container">
+          <div class="card-front right">
+            <!-- Front of Card -->
+            <div class="card-border"></div>
+          </div>
+          <div class="card-back">
+            <div class="card-back__content" id="nouns">
+              <div class="suite-block">
+                <p class="rank rank-noun"> 2 </p>
+                <div id="suit-noun">
+                  <!-- SVG icon -->
+                </div>
+              </div>
+
+              <p class="card-text" id="noun"> &#9730; </p>
+
+              <div class="suite-block upside-down">
+                <p class="rank rank-noun"> 2 </p>
+                <div id="suit-noun">
+                  <!-- SVG icon -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-border"></div>
+      </button>
+    </section> 
+  </body>
+
+
+
+</html>
