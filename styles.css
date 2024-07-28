@@ -74,8 +74,7 @@ p.card-text {
   gap: 12px;
   padding-left: 2px;
   padding-right: 2px;
-  height: 512px;
-  width: 512px;
+  max-width: calc(100% - 36px)
 }
 
 /********** Artwork / Cards*************/
