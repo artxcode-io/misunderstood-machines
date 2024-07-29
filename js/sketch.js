@@ -6,7 +6,7 @@
 
 function shuffle(deck) {
   for (let i = deck.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
+    const j = Math.floor(hl.random() * (i + 1));
     [deck[i], deck[j]] = [deck[j], deck[i]];
   }
 
@@ -106,45 +106,19 @@ window.onload = function () {
 
   const cards = document.querySelectorAll(".card");
 
+  setTimeout(() => {
+    cards[0].classList.toggle("flip");
+  }, 1000);
 
-document.querySelector(".playing-cards").addEventListener("click", (event) => {
-  const card = event.target.closest(".card");
-  if (!card) return;
+  setTimeout(() => {
+    cards[1].classList.toggle("flip");
+  }, 1500);
 
-  const flipCard = () => card.classList.toggle("flip");
-
-  const shuffleCard = () => {
-    if (!card.classList.contains("flip")) {
-      if (card.id.includes("sensitive")) {
-        setTimeout(shuffleAdjectives, 800);
-      }
-
-      if (card.id.includes("rigid")) {
-        setTimeout(shuffleNouns, 800);
-      }
-    }
-  };
-  flipCard();
-  shuffleCard();
-  
- 
-});
-
-
-
-cards.forEach((card) =>
-  card.addEventListener("keydown", (event) => {
-    if (event.key === "Enter" || event.key === " ") {
-      const card = event.target.closest(".card");
-      if (!card) return;
-
-      const flipCard = () => card.classList.toggle("flip");
-
-      flipCard();
-    }
-  })
-);
+  setTimeout(() => {
+    hl.token.capturePreview();
+  }, 2000);
 };
+
 
 
 
